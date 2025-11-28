@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@300;400;500;600&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --color-primary: #2563EB;
+  --color-secondary: #1F58D8;
+  --color-light: #F1F5F9;
+  --color-borderColor: #e2e8f0;
+  --color-text: #1e293b;
+  --color-bg: #ffffff;
+  --color-card: #ffffff;
+}
+
+.dark {
+  --color-primary: #3b82f6;
+  --color-secondary: #60a5fa;
+  --color-light: #0f172a;
+  --color-borderColor: #334155;
+  --color-text: #f8fafc;
+  --color-bg: #020617;
+  --color-card: #1e293b;
+}
+
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-light: var(--color-light);
+  --color-borderColor: var(--color-borderColor);
+  --color-text: var(--color-text);
+  --color-bg: var(--color-bg);
+  --color-card: var(--color-card);
+}
