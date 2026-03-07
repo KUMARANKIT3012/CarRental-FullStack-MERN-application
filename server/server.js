@@ -39,8 +39,10 @@ app.use('/api/bookings', bookingRouter);
 // PORT configuration TO RUN THE SERVER
 const PORT = process.env.PORT || 3000;
 
+// Start the express server locally only if not on Vercel
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+}
 
-// Start the express server
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`))
-
-
+// Export the app for Vercel serverless functions
+export default app;
