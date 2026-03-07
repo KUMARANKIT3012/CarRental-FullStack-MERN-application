@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from 'react-hot-toast';
 import { useNavigate } from "react-router-dom";
 
-axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/';
+// axios.defaults.baseURL is removed for relative API routing on Vercel
 
 // Create the AppContext
 export const AppContext = createContext();
