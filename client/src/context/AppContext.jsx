@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from 'react-hot-toast';
 import { useNavigate } from "react-router-dom";
 
-// axios.defaults.baseURL is removed for relative API routing on Vercel
+axios.defaults.baseURL = import.meta.env.VITE_API_BASE_URL;
 
 // Create the AppContext
 export const AppContext = createContext();
