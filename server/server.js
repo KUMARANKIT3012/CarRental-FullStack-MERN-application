@@ -36,7 +36,7 @@ app.use('/api/owner', ownerRouter);
 app.use('/api/bookings', bookingRouter);
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 // Only listen locally if NOT inside a Vercel Serverless Function
 if (!process.env.VERCEL) {
