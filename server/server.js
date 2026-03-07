@@ -15,7 +15,7 @@ import bookingRouter from './routes/bookingRoutes.js';
 const app = express()
 
 // calling the database connection function from db.js
-await connectDB()
+connectDB()
 
 
 // Middleware setup -- NOTE -(all the requests from frontend to backend will go through these middlewares)
