@@ -19,7 +19,14 @@ connectDB()
 
 
 // Middleware setup -- NOTE -(all the requests from frontend to backend will go through these middlewares)
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://car-rental-full-stack-mern-applicat-black.vercel.app',
+    'https://car-rental-full-stack-mern-application-client.vercel.app'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 
